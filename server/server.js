@@ -26,7 +26,7 @@ app.get('/google/auth', function (req, res) {
     var oauth2Client = new OAuth2(
       googleConfig.web.client_id,
       googleConfig.web.client_secret,
-      'http://web-n-data.com/google/redirect'
+      REDIRECT_URL
     );
 
     var url = oauth2Client.generateAuthUrl({
