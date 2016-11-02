@@ -39,6 +39,10 @@ app.get('/google/auth', function (req, res) {
     res.send({url: url});
 });
 
+app.get('/intern/redirect', function (req, res) {
+    var code = req.query.code;
+    res.redirect('/#/auth-redirect?code='+code)
+});
 
 app.get('/google/redirect', function (req, res) {
 
