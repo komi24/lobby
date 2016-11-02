@@ -10,6 +10,8 @@ app.use(bodyParser.json())
 
 var gmail = google.gmail('v1');
 
+var REDIRECT_URL = process.env.REDIRECT_URL || 'http://web-n-data.com/google/redirect'
+console.log("redirect ulr :", REDIRECT_URL );
 var SCOPES = [
     'https://mail.google.com/',
     'https://www.googleapis.com/auth/gmail.modify',
