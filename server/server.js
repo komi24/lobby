@@ -45,7 +45,7 @@ app.get('/google/redirect', function (req, res) {
     var oauth2Client = new OAuth2(
       googleConfig.web.client_id,
       googleConfig.web.client_secret,
-      'http://web-n-data.com/google/redirect'
+      REDIRECT_URL
     );
 
     var code = req.query.code;
@@ -65,7 +65,7 @@ app.get('/google/mails', function (req, res) {
     var oauth2Client = new OAuth2(
       googleConfig.web.client_id,
       googleConfig.web.client_secret,
-      'http://web-n-data.com/google/redirect'
+      REDIRECT_URL
     );
     oauth2Client.setCredentials({access_token: token})
 
@@ -100,7 +100,7 @@ app.post('/google/mail/send', function (req, res) {
     var oauth2Client = new OAuth2(
       googleConfig.web.client_id,
       googleConfig.web.client_secret,
-      'http://web-n-data.com/google/redirect'
+      REDIRECT_URL
     );
     oauth2Client.setCredentials({access_token: token})
 
